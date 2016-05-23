@@ -1,20 +1,24 @@
 {{!< default}}
 <div class="grid-block">
-  <main id="container-wrapper" class="grid-container blog" role="main">
+  <main id="content-wrapper" class="grid-container blog" role="main">
     {{#post}}
     <article class="{{post_class}}" role="article" itemscope itemtype="http://schema.org/Article">
       <header class="post-header">
+        <span class="post-byline"><time class="post-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='DD MMM YYYY'}}</time></span>
         <h1 class="post-title" itemprop="headline">{{{title}}}</h1>
-        <span class="post-byline">Posted on <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time> by {{author}}</span>
       </header>
       <div class="post-content" itemprop="articleBody">
         {{content}}
       </div>
       {{#if tags}}
       <div class="post-tags">
-        <span class="tag-list">{{tags prefix="Posted in: " separator=", "}}</span>
+        <span class="tag-list">{{tags separator=" "}}</span>
       </div>
       {{/if}}
+
+      <div class="comments">
+        {{>disqus}}
+      </div>
   </article>
   {{/post}}
 

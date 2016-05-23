@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -2563,34 +2564,76 @@ panda-loading {
     background-color: #D01F48; }
 
 #content-wrapper {
-  margin-top: 200px; }
-  #content-wrapper .blog {
-    max-width: 900px;
-    max-width: 0 auto; }
-    #content-wrapper .blog article header time {
+  margin-top: 60px; }
+  @media only screen and (min-width: 40em) {
+    #content-wrapper {
+      margin-top: 100px; } }
+  #content-wrapper.blog {
+    max-width: 850px;
+    max-width: 0 auto;
+    width: 100%; }
+    #content-wrapper.blog .middotDivider {
+      padding-left: 5px;
+      padding-right: 5px; }
+      #content-wrapper.blog .middotDivider::after {
+        content: '·'; }
+    #content-wrapper.blog .readmore-link {
+      color: #888;
+      font-size: 13px;
+      top: -5px;
+      position: relative; }
+      #content-wrapper.blog .readmore-link:hover {
+        color: #444; }
+    #content-wrapper.blog .comment-count {
+      color: #777;
+      font-size: 14px; }
+      #content-wrapper.blog .comment-count:hover {
+        color: #444; }
+    #content-wrapper.blog article header time {
       color: #888;
       margin-bottom: 0;
       font-size: 14px; }
-    #content-wrapper .blog article header h1 {
+    #content-wrapper.blog article header h1 {
       font-weight: 700;
       font-size: 40px;
-      margin-top: 0; }
-    #content-wrapper .blog article header h1 a {
+      margin-top: 0;
+      margin-bottom: 5px; }
+    #content-wrapper.blog article header h1 a {
       color: #555;
       transition: all .4s ease; }
-    #content-wrapper .blog article header h1 a:hover {
+    #content-wrapper.blog article h2, #content-wrapper.blog article h3 {
+      margin-top: 10px;
+      margin-bottom: 15px; }
+    #content-wrapper.blog article header h1 a:hover {
       color: #333; }
-    #content-wrapper .blog article p {
+    #content-wrapper.blog article p {
+      font-size: 18px;
+      line-height: 1.7;
       color: #474747; }
-    #content-wrapper .blog article {
-      margin-bottom: 100px; }
+    #content-wrapper.blog article {
+      margin-bottom: 50px; }
+    #content-wrapper.blog article .tag-list a {
+      background-color: #e9e9e9;
+      color: #999;
+      display: inline-block;
+      padding: 8px 10px;
+      margin-right: 10px;
+      font-style: normal;
+      font-size: 14px;
+      border-radius: 3px; }
+      #content-wrapper.blog article .tag-list a:hover {
+        color: #777;
+        background-color: #d9d9d9; }
+    #content-wrapper.blog article .comments {
+      margin-top: 50px; }
 
 panda-navigation {
   top: 0;
   width: 100%;
   padding: 10px 0;
   position: fixed;
-  background-color: rgba(255, 255, 255, 0.3); }
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 0.8); }
   panda-navigation .container {
     display: -ms-flexbox;
     display: flex;

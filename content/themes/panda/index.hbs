@@ -7,13 +7,14 @@
         <article class="{{post_class}}" role="article" itemscope itemtype="http://schema.org/Article">
           <header class="post-header">
             <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='DD MMM YYYY'}}</time>
+            <!--span class="middotDivider"></span><a class="comment-count" href="{{url}}#disqus_thread">Responses</a-->
             <h1 class="post-title" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
           </header>
           <p class="post-excerpt" itemprop="articleBody">
             {{excerpt}}<span>...</span>
           </p>
           <div class="post-readmore">
-            <a class="readmore-link" href="{{{url}}}" rel="bookmark">Read More →</a>
+            <a class="readmore-link" href="{{{url}}}" rel="bookmark">Read More</a>
           </div>
         </article>
         {{/foreach}}

@@ -37,7 +37,7 @@ https://github.com/neoighodaro/neoighodaro.com/
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{! Page Meta }}
-    <title>{{meta_title}}</title>
+    <title>{{meta_title}} | Neo Ighodaro</title>
     <meta name="description" content="{{meta_description}}"/>
 
     {{! Prefetch }}
@@ -57,12 +57,14 @@ https://github.com/neoighodaro/neoighodaro.com/
     <link rel="dns-prefetch" href="//connect.facebook.net">
     <link rel="dns-prefetch" href="//use.fontawesome.com" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
 
     {{! Assets }}
     <link rel="shortcut icon" href="{{asset "img/favicon.ico"}}">
     <link href="{{asset "css/skeleton.css"}}" rel="stylesheet" type="text/css" />
     <link href="{{asset "css/app.css"}}" rel="stylesheet" type="text/css" />
     <link href="//fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet" type="text/css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css" rel="stylesheet"/>
 
     <!-- SEO -->
     <link rel="canonical" href="http://blog.neoighodaro.com" />
@@ -95,8 +97,14 @@ https://github.com/neoighodaro/neoighodaro.com/
     <!-- Scripts -->
     <script async src="//use.fontawesome.com/2f4ea55c3f.js"></script>
     <script src="//fast.eager.io/BEHbMtrMbI.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
     <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
     (function(){function djs() {var e = document.createElement("script");e.src="{{asset 'js/defer.js'}}";document.body.appendChild(e);}if (window.addEventListener){window.addEventListener("load",djs,false);}else if(window.attachEvent){window.attachEvent("onload",djs);}else{window.onload=djs;}}());
+
+    /* Disqus */
+    var disqus_shortname = 'neoighodaro';
+    (function () { var s = document.createElement('script'); s.async = true; s.type = 'text/javascript'; s.src = 'http://' + disqus_shortname + '.disqus.com/count.js'; (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s); }());
     </script>
   </body>
 </html>
