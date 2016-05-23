@@ -2562,6 +2562,29 @@ panda-loading {
     position: absolute;
     background-color: #D01F48; }
 
+#content-wrapper {
+  margin-top: 200px; }
+  #content-wrapper .blog {
+    max-width: 900px;
+    max-width: 0 auto; }
+    #content-wrapper .blog article header time {
+      color: #888;
+      margin-bottom: 0;
+      font-size: 14px; }
+    #content-wrapper .blog article header h1 {
+      font-weight: 700;
+      font-size: 40px;
+      margin-top: 0; }
+    #content-wrapper .blog article header h1 a {
+      color: #555;
+      transition: all .4s ease; }
+    #content-wrapper .blog article header h1 a:hover {
+      color: #333; }
+    #content-wrapper .blog article p {
+      color: #474747; }
+    #content-wrapper .blog article {
+      margin-bottom: 100px; }
+
 panda-navigation {
   top: 0;
   width: 100%;
