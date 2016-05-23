@@ -1,0 +1,60 @@
+{{!< default}}
+<style type="text/css">
+#content-wrapper {
+  /*margin-top:200px;*/
+}
+.grid-container.blog {
+  max-width: 900px;
+  max-width: 0 auto;
+}
+.blog article header time {
+  color: #888;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.blog article header h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 0;
+}
+.blog article header h1 a {
+  color: #555;
+  transition: all .4s ease;
+}
+.blog article header h1 a:hover {
+  color:#333
+}
+.blog article p {
+  color: #474747;
+}
+.blog article {
+  margin-bottom: 100px;
+}
+</style>
+<div class="grid-block">
+  <main id="content-wrapper" class="grid-container blog" role="main">
+    <div class="grid-block">
+      <div class="grid-content">
+        {{#foreach posts}}
+        <article class="{{post_class}}" role="article" itemscope itemtype="http://schema.org/Article">
+          <header class="post-header">
+            <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='DD MMM YYYY'}}</time>
+            <h1 class="post-title" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
+          </header>
+          <p class="post-excerpt" itemprop="articleBody">
+            {{excerpt}}<span>...</span>
+          </p>
+          <div class="post-readmore">
+            <a class="readmore-link" href="{{{url}}}" rel="bookmark">Read More →</a>
+          </div>
+        </article>
+        {{/foreach}}
+
+        {{#if pagination}}
+          {{> pagination}}
+        {{/if}}
+      </div>
+
+    </div>
+  </main>
+</div>

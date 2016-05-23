@@ -1,0 +1,6 @@
+{
+  "name": "Panda",
+  "version": "1.0.0",
+  "readmeFilename": "README.md",
+  "description": "Panda theme integration for [Ghost](http://github.com/tryghost/ghost/)."
+}

@@ -1,0 +1,57 @@
+{{!< default}}
+<style type="text/css">
+#content-wrapper {
+  /*margin-top:200px;*/
+}
+.grid-container.blog {
+  max-width: 900px;
+  max-width: 0 auto;
+}
+.blog article header time {
+  color: #888;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.blog article header h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 0;
+}
+.blog article header h1 a {
+  color: #555;
+  transition: all .4s ease;
+}
+.blog article header h1 a:hover {
+  color:#333
+}
+.blog article p {
+  color: #474747;
+}
+.blog article {
+  margin-bottom: 100px;
+}
+</style>
+<div class="grid-block">
+  <main id="container-wrapper" class="grid-container blog" role="main">
+    {{#post}}
+    <article class="{{post_class}}" role="article" itemscope itemtype="http://schema.org/Article">
+      <header class="post-header">
+        <h1 class="post-title" itemprop="headline">{{{title}}}</h1>
+        <span class="post-byline">Posted on <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time> by {{author}}</span>
+      </header>
+      <div class="post-content" itemprop="articleBody">
+        {{content}}
+      </div>
+      {{#if tags}}
+      <div class="post-tags">
+        <span class="tag-list">{{tags prefix="Posted in: " separator=", "}}</span>
+      </div>
+      {{/if}}
+  </article>
+  {{/post}}
+
+  {{#if pagination}}
+    {{> pagination}}
+  {{/if}}
+  </main>
+</div>
