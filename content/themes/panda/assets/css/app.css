@@ -2562,13 +2562,13 @@ panda-loading {
     position: absolute;
     background-color: #D01F48; }
 
-panda-navigation,.page-navigation {
+panda-navigation {
   top: 0;
   width: 100%;
   padding: 10px 0;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.3); }
-  panda-navigation .container, .page-navigation .container {
+  panda-navigation .container {
     display: -ms-flexbox;
     display: flex;
     height: auto;
@@ -2591,7 +2591,7 @@ panda-navigation,.page-navigation {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
-  panda-navigation .site-logo, .page-navigation .site-logo {
+  panda-navigation .site-logo {
     display: -ms-flexbox;
     display: flex;
     height: auto;
@@ -2614,7 +2614,7 @@ panda-navigation,.page-navigation {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
-    panda-navigation .site-logo .content, .page-navigation .site-logo .content {
+    panda-navigation .site-logo .content {
       display: block;
       padding: 0 1rem;
       overflow-y: auto;
@@ -2622,15 +2622,15 @@ panda-navigation,.page-navigation {
       -ms-overflow-style: -ms-autohiding-scrollbar;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto; }
-    panda-navigation .site-logo a, .page-navigation .site-logo a {
+    panda-navigation .site-logo a {
       width: 40px;
       height: 40px;
       display: block;
       background: url("../img/neo-logo.png");
       background-size: 188px 40px; }
-    panda-navigation .site-logo img, .page-navigation .site-logo img {
+    panda-navigation .site-logo img {
       max-height: 40px; }
-  panda-navigation .mobile-menu, .page-navigation .mobile-menu {
+  panda-navigation .mobile-menu {
     display: -ms-flexbox;
     display: flex;
     height: auto;
@@ -2653,8 +2653,7 @@ panda-navigation,.page-navigation {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
-    panda-navigation .mobile-menu .content,
-    .page-navigation .mobile-menu .content {
+    panda-navigation .mobile-menu .content {
       display: block;
       padding: 0 1rem;
       overflow-y: auto;
@@ -2662,21 +2661,17 @@ panda-navigation,.page-navigation {
       -ms-overflow-style: -ms-autohiding-scrollbar;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto; }
-      panda-navigation .mobile-menu .content a,
-      .page-navigation .mobile-menu .content a {
+      panda-navigation .mobile-menu .content a {
         float: right;
         line-height: 40px; }
     @media only screen and (min-width: 75em) {
-      panda-navigation .mobile-menu,
-      .page-navigation .mobile-menu {
+      panda-navigation .mobile-menu {
         display: none; } }
-  panda-navigation .desktop-menu,
-  .page-navigation .desktop-menu {
+  panda-navigation .desktop-menu {
     display: none;
     padding: 10px 0; }
     @media only screen and (min-width: 75em) {
-      panda-navigation .desktop-menu,
-      .page-navigation .desktop-menu {
+      panda-navigation .desktop-menu {
         display: -ms-flexbox;
         display: flex;
         height: auto;
@@ -2699,8 +2694,7 @@ panda-navigation,.page-navigation {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar; }
-        panda-navigation .desktop-menu .content,
-        .page-navigation .desktop-menu .content {
+        panda-navigation .desktop-menu .content {
           display: block;
           padding: 0 1rem;
           overflow-y: auto;
@@ -2708,40 +2702,32 @@ panda-navigation,.page-navigation {
           -ms-overflow-style: -ms-autohiding-scrollbar;
           -ms-flex: 1 1 auto;
               flex: 1 1 auto; }
-        panda-navigation .desktop-menu ul,
-        .page-navigation .desktop-menu ul {
+        panda-navigation .desktop-menu ul {
           margin: 0;
           padding: 0;
           float: right;
           list-style: none; }
-        panda-navigation .desktop-menu ul > li,
-        .page-navigation .desktop-menu ul > li {
+        panda-navigation .desktop-menu ul > li {
           float: left;
           margin-right: 30px; }
-          panda-navigation .desktop-menu ul > li:last-child,
-          .page-navigation .desktop-menu ul > li:last-child {
+          panda-navigation .desktop-menu ul > li:last-child {
             margin-right: 0; }
-          panda-navigation .desktop-menu ul > li.active > a,
-          .page-navigation .desktop-menu ul > li.active > a {
+          panda-navigation .desktop-menu ul > li.active > a {
             background-color: #df2953;
             padding: 0 10px;
             color: #fff;
             border-radius: 5px;
             display: inline-block; }
-            panda-navigation .desktop-menu ul > li.active > a:hover,
-            .page-navigation .desktop-menu ul > li.active > a:hover {
+            panda-navigation .desktop-menu ul > li.active > a:hover {
               background-color: #D01F48;
               color: #fff; }
-        panda-navigation .desktop-menu ul > li > a,
-        .page-navigation .desktop-menu ul > li > a {
+        panda-navigation .desktop-menu ul > li > a {
           color: #777;
           transition: all .3s ease; }
-          panda-navigation .desktop-menu ul > li > a:hover,
-          .page-navigation .desktop-menu ul > li > a:hover {
+          panda-navigation .desktop-menu ul > li > a:hover {
             color: #D01F48; } }
   @media only screen and (min-width: 75em) {
-    panda-navigation,
-    .page-navigation {
+    panda-navigation {
       position: absolute; } }
 
 #page-container .home {
