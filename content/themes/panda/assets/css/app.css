@@ -2845,6 +2845,16 @@ panda-navigation {
   #page-container .work panda-mini-slider ul img, #page-container .work div[panda-mini-slider] ul img {
     border-radius: 8px; }
 
+#page-container .contact .available {
+  color: green; }
+
+#page-container .contact .unavailable {
+  color: red; }
+
+#page-container .contact .work-status {
+  display: inline-block;
+  margin-top: 10px; }
+
 #page-container .about {
   background-size: contain;
   background-repeat: no-repeat;
