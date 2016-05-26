@@ -37,7 +37,8 @@ https://github.com/neoighodaro/neoighodaro.com/
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{! Page Meta }}
-    <title>{{meta_title}} | Neo Ighodaro</title>
+    {{#is "index"}}<title>Blog of a Nigerian Based Web Developer | Neo Ighodaro</title>{{/is}}
+    {{#is "post"}}<title>{{meta_title}} | Neo Ighodaro</title>{{/is}}
     <meta name="description" content="{{meta_description}}"/>
 
     {{! Prefetch }}
