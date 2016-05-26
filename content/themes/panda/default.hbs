@@ -73,14 +73,24 @@ https://github.com/neoighodaro/neoighodaro.com/
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{meta_title}}" />
-    <meta property="og:description" content="{{meta_description}}" />
-    <meta property="og:url" content="https://write.neoighodaro.com" />
     <meta property="og:site_name" content="Neo Ighodaro" />
     <meta property="og:image" content="https://www.neoighodaro.com/assets/img/neo.jpg" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@neoighodaro" />
     <meta name="twitter:title" content="{{meta_title}}" />
+
+    {{#is 'index'}}
+    <meta property="og:description" content="{{meta_description}}" />
     <meta name="twitter:description" content="{{meta_description}}" />
+    {{/is}}
+
+    {{#is 'post'}}
+    {{#post}}
+    <meta property="og:description" content="{{excerpt}}" />
+    <meta name="twitter:description" content="{{excerpt}}" />
+    {{/post}}
+    {{/is}}
+
     <meta name="twitter:image" content="https://www.neoighodaro.com/assets/img/neo.jpg" />
     <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/www.neoighodaro.com\/","@logo":"", "name":"Neo Ighodaro","sameAs":["https://www.neoighodaro.com", "https://www.facebook.com/catchphraze/","https://twitter.com/neoighodaro/","https://www.instagram.com/neoighodaro/"]}</script>
     {{ghost_head}}
