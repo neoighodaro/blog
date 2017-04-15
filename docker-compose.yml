@@ -1,6 +1,6 @@
 version: '2'
 services:
-  neoighodaro-blog:
+  blog:
     build: ./
     container_name: neoighodaro-blog
     env_file: .env
