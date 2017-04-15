@@ -1,0 +1,10 @@
+version: '2'
+services:
+  neoighodaro-blog:
+    build: ./
+    container_name: neoighodaro-blog
+    env_file: .env
+    volumes:
+      - ./content:/var/lib/ghost/
+    ports:
+      - 2368:2368
