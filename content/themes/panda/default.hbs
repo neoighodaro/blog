@@ -33,11 +33,14 @@ https://github.com/neoighodaro/neoighodaro.com/
   <head>
     {{! Document Settings }}
     <meta charset="utf-8" />
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{! Page Meta }}
-    {{#is "index"}}<title>Blog of a Nigerian Based Web Developer | Neo Ighodaro</title>{{/is}}
+    {{#is "index"}}<title>Nigerian Based Software Developer | Neo Ighodaro</title>{{/is}}
     {{#is "post"}}<title>{{meta_title}} | Neo Ighodaro</title>{{/is}}
 
     {{! Prefetch }}
@@ -65,35 +68,6 @@ https://github.com/neoighodaro/neoighodaro.com/
     <link href="{{asset "css/app.css"}}" rel="stylesheet" type="text/css" />
     <link href="//fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet" type="text/css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css" rel="stylesheet"/>
-
-    <!-- SEO -->
-    <link rel="canonical" href="https://write.neoighodaro.com" />
-    <link rel="publisher" href="https://plus.google.com/+NeoIghodaro"/>
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{meta_title}}" />
-    <meta property="og:site_name" content="Neo Ighodaro" />
-    <meta property="og:image" content="https://www.neoighodaro.com/assets/img/neo.jpg" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@neoighodaro" />
-    <meta name="twitter:title" content="{{meta_title}}" />
-
-    {{#is 'index'}}
-    <meta name="description" content="Neo Ighodaro is a twenty-something year old full-stack web developer and graphic designer based in Lagos, Nigeria. Hobbies include programming, singing and drawing."/>
-    <meta property="og:description" content="Neo Ighodaro is a twenty-something year old full-stack web developer and graphic designer based in Lagos, Nigeria. Hobbies include programming, singing and drawing." />
-    <meta name="twitter:description" content="Neo Ighodaro is a twenty-something year old full-stack web developer and graphic designer based in Lagos, Nigeria. Hobbies include programming, singing and drawing." />
-    {{/is}}
-
-    {{#is 'post'}}
-    {{#post}}
-    <meta name="description" content="{{excerpt}}"/>
-    <meta property="og:description" content="{{excerpt}}" />
-    <meta name="twitter:description" content="{{excerpt}}" />
-    {{/post}}
-    {{/is}}
-
-    <meta name="twitter:image" content="https://www.neoighodaro.com/assets/img/neo.jpg" />
-    <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","url":"https:\/\/www.neoighodaro.com\/","@logo":"", "name":"Neo Ighodaro","sameAs":["https://www.neoighodaro.com", "https://www.facebook.com/catchphraze/","https://twitter.com/neoighodaro/","https://www.instagram.com/neoighodaro/"]}</script>
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
